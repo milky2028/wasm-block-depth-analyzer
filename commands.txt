@@ -1,0 +1,8 @@
+wasm2wat /Users/tgross/git/photoshop/photoshop/projects/apollo-web/public/apollo_web.symbolized.wasm -o /Users/tgross/git/photoshop/photoshop/projects/apollo-web/public/apollo_web.symbolized-copy.wat --enable-all
+
+wasm2wat /Users/tgross/git/photoshop/photoshop/projects/apollo-web/public/apollo_web.symbolized.wasm -o /Users/tgross/Documents/GitHub/wasm-block-depth-analyzer/test-data.wat --enable-all && sed -i '' '10991310,11115009!d' /Users/tgross/Documents/GitHub/wasm-block-depth-analyzer/test-data.wat && code /Users/tgross/Documents/GitHub/wasm-block-depth-analyzer/test-data.wat
+
+sed -i '' 'm,n!d' filename
+
+deno run --allow-read analyze.ts /Users/tgross/Documents/GitHub/wasm-block-depth-analyzer/test-data.wat
+deno run --inspect-wait --allow-read analyze.ts /Users/tgross/git/photoshop/photoshop/projects/apollo-web/public/apollo_web.symbolized.wat

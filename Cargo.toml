@@ -1,9 +1,0 @@
-[package]
-name = "wasm-block-depth-analyzer"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-wasmparser = "0.222.0"
-wast = "222.0.0"
-wat = "1.222.0"
