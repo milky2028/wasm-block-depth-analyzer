@@ -1,5 +1,5 @@
 /*
-  Install Web Assembly Binary Toolkit: brew install wabt
+  Install Web Assembly Binary Toolkit and Deno: brew install wabt deno
   Generate a .wat file from a .wasm file: wasm2wat input.wasm -o output.wat --enable-all
   Run this script: deno run --allow-read analyze.ts your-wat-file.wat
   Pipe the output to a JSON file to examine the results: deno run --allow-read analyze.ts your-wat-file.wat >> try-data.json
