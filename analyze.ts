@@ -36,9 +36,9 @@ type FunctionData = {
   max_depth: number;
 };
 
-let current_line = 1;
 let name = "";
-let last_function_start: number | undefined = undefined;
+let current_line = 1; // 1-indexed
+let last_function_start: number | undefined = undefined; // undefined until first function is hit
 let try_statements = 0;
 let max_depth = 0;
 
@@ -71,6 +71,8 @@ await file.readable
 
             // function names start with (func $my_function_name and are followed by a space.
             name = line.match(/\(func\s(\$\S+)\s/)?.[1] ?? "";
+
+            // reset counters
             last_function_start = current_line;
             max_depth = 0;
             try_statements = 0;
